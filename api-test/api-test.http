@@ -1,0 +1,9 @@
+### 用json数据下面必须空一行
+POST http://localhost:63040/content/course/list?pageNo=4&pageSize=1
+Content-Type: application/json
+
+{
+  "auditStatus": "202004",
+  "courseName": "SpringBoot",
+  "publishStatus": "203001"
+}

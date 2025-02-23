@@ -1,0 +1,18 @@
+#微服务配置
+spring:
+  application:
+    name: content-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.101.65:3306/xcplus_content?serverTimezone=UTC&userUnicode=true&useSSL=false
+    username: root
+    password: mysql
+# 日志文件配置路径
+#logging:
+#  config: classpath:log4j2-dev.xml
+
+mybatis-plus:
+  type-aliases-package: com.online_study.model.po
+  mapper-locations: classpath:mapper/*.xml # mapper文件的默认路径也是这个
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 控制台输出sql语句

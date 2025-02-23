@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.online_study.content.mapper.CourseTeacherMapper">
+
+    <resultMap id="BaseResultMap" type="com.online_study.model.po.CourseTeacher">
+            <id property="id" column="id" />
+            <result property="courseId" column="course_id" />
+            <result property="teacherName" column="teacher_name" />
+            <result property="position" column="position" />
+            <result property="introduction" column="introduction" />
+            <result property="photograph" column="photograph" />
+            <result property="createDate" column="create_date" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,course_id,teacher_name,position,introduction,photograph,
+        create_date
+    </sql>
+</mapper>

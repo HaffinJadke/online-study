@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.online_study.content.mapper.CourseMarketMapper">
+
+    <resultMap id="BaseResultMap" type="com.online_study.model.po.CourseMarket">
+            <id property="id" column="id" />
+            <result property="charge" column="charge" />
+            <result property="price" column="price" />
+            <result property="originalPrice" column="original_price" />
+            <result property="qq" column="qq" />
+            <result property="wechat" column="wechat" />
+            <result property="phone" column="phone" />
+            <result property="validDays" column="valid_days" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,charge,price,original_price,qq,wechat,
+        phone,valid_days
+    </sql>
+</mapper>

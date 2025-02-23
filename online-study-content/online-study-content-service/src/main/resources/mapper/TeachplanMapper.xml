@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.online_study.content.mapper.TeachplanMapper">
+
+    <resultMap id="BaseResultMap" type="com.online_study.model.po.Teachplan">
+            <id property="id" column="id" />
+            <result property="pname" column="pname" />
+            <result property="parentid" column="parentid" />
+            <result property="grade" column="grade" />
+            <result property="mediaType" column="media_type" />
+            <result property="startTime" column="start_time" />
+            <result property="endTime" column="end_time" />
+            <result property="description" column="description" />
+            <result property="timelength" column="timelength" />
+            <result property="orderby" column="orderby" />
+            <result property="courseId" column="course_id" />
+            <result property="coursePubId" column="course_pub_id" />
+            <result property="status" column="status" />
+            <result property="isPreview" column="is_preview" />
+            <result property="createDate" column="create_date" />
+            <result property="changeDate" column="change_date" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,pname,parentid,grade,media_type,start_time,
+        end_time,description,timelength,orderby,course_id,
+        course_pub_id,status,is_preview,create_date,change_date
+    </sql>
+</mapper>

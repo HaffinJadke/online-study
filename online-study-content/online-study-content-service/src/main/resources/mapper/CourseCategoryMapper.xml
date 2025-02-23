@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.online_study.content.mapper.CourseCategoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.online_study.model.po.CourseCategory">
+            <id property="id" column="id" />
+            <result property="name" column="name" />
+            <result property="label" column="label" />
+            <result property="parentid" column="parentid" />
+            <result property="isShow" column="is_show" />
+            <result property="orderby" column="orderby" />
+            <result property="isLeaf" column="is_leaf" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,label,parentid,is_show,orderby,
+        is_leaf
+    </sql>
+</mapper>
