@@ -9,6 +9,7 @@
     <description>online-study-parent</description>
     <modules>
         <module>../online-study-base</module>
+        <module>../online-study-content</module>
     </modules>
     <packaging>pom</packaging>
 
