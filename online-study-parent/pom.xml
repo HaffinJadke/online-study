@@ -10,6 +10,7 @@
     <modules>
         <module>../online-study-base</module>
         <module>../online-study-content</module>
+        <module>../online-study-system</module>
     </modules>
     <packaging>pom</packaging>
 
