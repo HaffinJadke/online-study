@@ -13,6 +13,6 @@ import java.util.List;
 @Data
 public class CourseCategoryTreeDto extends CourseCategory implements Serializable {
 
-    List<CourseCategoryTreeDto> children;
+    List<CourseCategoryTreeDto> childrenTreeNodes;
 
 }

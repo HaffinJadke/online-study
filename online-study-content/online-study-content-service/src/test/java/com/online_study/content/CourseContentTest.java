@@ -7,6 +7,7 @@ import com.online_study.base.model.PageResult;
 import com.online_study.content.mapper.CourseBaseMapper;
 import com.online_study.content.mapper.CourseCategoryMapper;
 import com.online_study.content.service.CourseBaseInfoService;
+import com.online_study.content.service.CourseCategoryService;
 import com.online_study.model.dto.CourseCategoryTreeDto;
 import com.online_study.model.dto.QueryCourseParamsDto;
 import com.online_study.model.po.CourseBase;
@@ -23,6 +24,9 @@ public class CourseContentTest {
     @Autowired
     CourseBaseMapper courseBaseMapper;
 
+    /**
+     * 课程查询的mapper测试
+     */
     @Test
     public void testCourseBaseMapper(){
         //条件查询，dto存了条件模型
@@ -58,6 +62,9 @@ public class CourseContentTest {
     @Autowired
     CourseBaseInfoService courseBaseInfoService;
 
+    /**
+     * 课程查询的service测试
+     */
     @Test
     public void testCourseInfoService() {
         //条件查询，dto存了条件模型
@@ -78,10 +85,24 @@ public class CourseContentTest {
     @Autowired
     CourseCategoryMapper courseCategoryMapper;
 
-    //测试课程分类
+    /**
+     * 课程分类的mapper测试
+     */
     @Test
     public void testCourseCategoryMapper(){
         List<CourseCategoryTreeDto> courseCategoryTree = courseCategoryMapper.selectCategoryTree("1");
+        System.out.println(courseCategoryTree);
+    }
+
+    @Autowired
+    CourseCategoryService courseCategoryService;
+
+    /**
+     * 课程分类的service测试
+     */
+    @Test
+    public void testCourseCategoryService(){
+        List<CourseCategoryTreeDto> courseCategoryTree = courseCategoryService.queryCategoryTree("1");
         System.out.println(courseCategoryTree);
     }
 }

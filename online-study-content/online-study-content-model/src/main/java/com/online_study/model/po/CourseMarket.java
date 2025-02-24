@@ -16,9 +16,9 @@ public class CourseMarket {
 
     private String charge;
 
-    private Double price;
+    private Float price;
 
-    private Double originalPrice;
+    private Float originalPrice;
 
     private String qq;
 
