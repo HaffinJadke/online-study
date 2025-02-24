@@ -15,7 +15,15 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        id,name,label,parentid,is_show,orderby,
-        is_leaf
+        id,name,label,parentid,is_show,orderby,is_leaf
     </sql>
+
+    <select id="selectCategoryTree" parameterType="String" resultType="com.online_study.model.dto.CourseCategoryTreeDto">
+        with recursive t1 as (
+            select * from course_category where id = #{id}
+            union all
+            select b.* from course_category b inner join t1 on t1.id = b.parentid
+        )
+        select * from t1 order by t1.orderby, t1.id
+    </select>
 </mapper>

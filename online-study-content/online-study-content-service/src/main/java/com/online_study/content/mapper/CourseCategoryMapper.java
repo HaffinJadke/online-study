@@ -1,7 +1,10 @@
 package com.online_study.content.mapper;
 
+import com.online_study.model.dto.CourseCategoryTreeDto;
 import com.online_study.model.po.CourseCategory;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+import java.util.List;
 
 /**
 * @author scq94
@@ -11,8 +14,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 */
 public interface CourseCategoryMapper extends BaseMapper<CourseCategory> {
 
+    //sql递归查询课程分类，这里的返回类型不用list也可以，因为查找的是当前节点的数，只返回一个CourseCategoryTreeDto
+    List<CourseCategoryTreeDto> selectCategoryTree(String id);
 }
-
-
-
-

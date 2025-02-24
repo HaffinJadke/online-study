@@ -5,7 +5,9 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.online_study.base.model.PageParams;
 import com.online_study.base.model.PageResult;
 import com.online_study.content.mapper.CourseBaseMapper;
+import com.online_study.content.mapper.CourseCategoryMapper;
 import com.online_study.content.service.CourseBaseInfoService;
+import com.online_study.model.dto.CourseCategoryTreeDto;
 import com.online_study.model.dto.QueryCourseParamsDto;
 import com.online_study.model.po.CourseBase;
 import org.apache.commons.lang.StringUtils;
@@ -71,5 +73,15 @@ public class CourseContentTest {
 
         PageResult<CourseBase> pageResult = courseBaseInfoService.queryCourseBaseList(pageParams, courseParamsDto);
         System.out.println(pageResult);
+    }
+
+    @Autowired
+    CourseCategoryMapper courseCategoryMapper;
+
+    //测试课程分类
+    @Test
+    public void testCourseCategoryMapper(){
+        List<CourseCategoryTreeDto> courseCategoryTree = courseCategoryMapper.selectCategoryTree("1");
+        System.out.println(courseCategoryTree);
     }
 }
