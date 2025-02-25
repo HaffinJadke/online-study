@@ -12,6 +12,9 @@ import lombok.Data;
 @TableName(value ="course_market")
 @Data
 public class CourseMarket {
+
+    // TODO:course_market表使用了自定义主键，否则调用insert方法时会默认用雪花算法覆盖本来正确的主键
+    @TableId(type=IdType.INPUT) //主键自定义，否则insert时会用雪花算法或自增
     private Long id;
 
     private String charge;

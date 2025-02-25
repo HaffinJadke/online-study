@@ -1,7 +1,10 @@
 package com.online_study.content.mapper;
 
+import com.online_study.model.dto.TeachPlanDto;
 import com.online_study.model.po.Teachplan;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+import java.util.List;
 
 /**
 * @author scq94
@@ -11,6 +14,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 */
 public interface TeachplanMapper extends BaseMapper<Teachplan> {
 
+    //课程计划树形结构查询
+    public List<TeachPlanDto> selectTreeNodes(Long courseId);
 }
 
 

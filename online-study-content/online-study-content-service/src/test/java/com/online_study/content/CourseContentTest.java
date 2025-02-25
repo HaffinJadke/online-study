@@ -6,10 +6,12 @@ import com.online_study.base.model.PageParams;
 import com.online_study.base.model.PageResult;
 import com.online_study.content.mapper.CourseBaseMapper;
 import com.online_study.content.mapper.CourseCategoryMapper;
+import com.online_study.content.mapper.TeachplanMapper;
 import com.online_study.content.service.CourseBaseInfoService;
 import com.online_study.content.service.CourseCategoryService;
 import com.online_study.model.dto.CourseCategoryTreeDto;
 import com.online_study.model.dto.QueryCourseParamsDto;
+import com.online_study.model.dto.TeachPlanDto;
 import com.online_study.model.po.CourseBase;
 import org.apache.commons.lang.StringUtils;
 import org.junit.jupiter.api.Test;
@@ -104,5 +106,16 @@ public class CourseContentTest {
     public void testCourseCategoryService(){
         List<CourseCategoryTreeDto> courseCategoryTree = courseCategoryService.queryCategoryTree("1");
         System.out.println(courseCategoryTree);
+    }
+
+    @Autowired
+    TeachplanMapper teachplanMapper;
+
+    /**
+     * 测试课程计划查询接口
+     */
+    @Test void testSelectTreeNodes(){
+        List<TeachPlanDto> teachPlanDtos = teachplanMapper.selectTreeNodes(117L);
+        System.out.println(teachPlanDtos);
     }
 }

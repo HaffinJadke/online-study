@@ -208,12 +208,11 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 
         //修改营销信息
         //TODO:调用saveCourseMarket
-        CourseMarket courseMarket = courseMarketMapper.selectById(courseId);
+        CourseMarket courseMarket = new CourseMarket();
+        BeanUtils.copyProperties(editCourseDto, courseMarket);
         int row2 = 0;
-        if(courseMarket == null) {
-            CourseMarket courseMarketNew = new CourseMarket();
-            BeanUtils.copyProperties(editCourseDto, courseMarketNew);
-            row2 = courseMarketMapper.insert(courseMarketNew);
+        if(courseMarketMapper.selectById(courseId) == null) {
+            row2 = courseMarketMapper.insert(courseMarket);
         } else {
             row2 = courseMarketMapper.updateById(courseMarket);
         }
