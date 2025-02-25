@@ -11,9 +11,9 @@ spring:
     url: jdbc:mysql://192.168.101.65:3306/xcplus_content?serverTimezone=UTC&userUnicode=true&useSSL=false
     username: root
     password: mysql
-# 日志文件配置路径
-logging:
-  config: classpath:log4j2-dev.xml
+## 日志文件配置路径
+#logging:
+#  config: classpath:log4j2-dev.xml
 
 # swagger扫描包路径
 swagger:
@@ -23,4 +23,6 @@ swagger:
   enabled: true
   version: 1.0.0
 
-
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 控制台输出sql语句

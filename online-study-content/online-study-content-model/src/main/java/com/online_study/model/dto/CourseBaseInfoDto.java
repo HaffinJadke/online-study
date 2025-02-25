@@ -5,10 +5,10 @@ import lombok.Data;
 
 
 /**
- * 新增课程后返回参数的数据模型
+ * 新增课程、修改课程后返回参数的数据模型
  */
 @Data
-public class CourseCreateInfoDto extends CourseBase {
+public class CourseBaseInfoDto extends CourseBase {
     /**
      * 收费规则，对应数据字典
      */
