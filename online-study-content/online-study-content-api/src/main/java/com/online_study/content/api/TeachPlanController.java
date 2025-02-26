@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@Api(value="课程计划查询接口", tags="课程计划查询接口")
+@Api(value="课程计划接口", tags="课程计划接口")
 public class TeachPlanController {
 
     @Autowired
@@ -28,5 +28,23 @@ public class TeachPlanController {
     @PostMapping("/teachplan")
     public void saveTeachplan(@RequestBody SaveTeachplanDto saveTeachplanDto) {
         teachPlanService.saveTeachplan(saveTeachplanDto);
+    }
+
+    @ApiOperation("删除课程计划")
+    @DeleteMapping("/teachplan/{id}")
+    public void removeTeachplan(@PathVariable Long id) {
+        teachPlanService.removeTeachplan(id);
+    }
+
+    @ApiOperation("课程计划上移")
+    @PostMapping("/teachplan/moveup/{id}")
+    public void moveupTeachplan(@PathVariable Long id) {
+        teachPlanService.moveUpOrDownTeachplan(id, true);
+    }
+
+    @ApiOperation("课程计划下移")
+    @PostMapping("/teachplan/movedown/{id}")
+    public void movedownTeachplan(@PathVariable Long id) {
+        teachPlanService.moveUpOrDownTeachplan(id, false);
     }
 }

@@ -97,4 +97,14 @@
         where one.parentid=0 and one.course_id=#{courseId}
         order by one.orderby, two.orderby
     </select>
+
+    <select id="selectMaxOrderby" resultType="java.lang.Integer">
+        select max(orderby) from teachplan
+        where parentid=#{parentId} and course_id=#{courseId}
+    </select>
+
+    <select id="selectMinOrderby" resultType="java.lang.Integer">
+        select min(orderby) from teachplan
+        where parentid=#{parentId} and course_id=#{courseId}
+    </select>
 </mapper>

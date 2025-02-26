@@ -1,0 +1,16 @@
+# group: online-study-content
+# \online-study-system\online-study-system-service\src\main\resources\bootstrap.yaml
+server:
+  servlet:
+    context-path: /system
+  port: 63110
+
+spring:
+  cloud:
+    config:
+      override-none: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.101.65:3306/xcplus_system?serverTimezone=UTC&userUnicode=true&useSSL=false
+    username: root
+    password: mysql

@@ -22,4 +22,18 @@ public interface TeachPlanService {
      * @param saveTeachplanDto
      */
     public void saveTeachplan(SaveTeachplanDto saveTeachplanDto);
+
+    /**
+     * 删除课程计划
+     * @param id
+     */
+    public void removeTeachplan(Long id);
+
+    /**
+     * 课程计划上移、下移，二者使用同一个接口，为真上移，为假下移
+     * @param id
+     * @param upOrDown
+     */
+    public void moveUpOrDownTeachplan(Long id, boolean upOrDown);
+
 }

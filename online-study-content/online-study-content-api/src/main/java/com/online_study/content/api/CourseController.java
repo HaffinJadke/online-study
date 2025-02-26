@@ -40,7 +40,8 @@ public class CourseController {
 
         //TODO：用户单点登录后自动获取所属机构的id
         //先编一个机构id
-        return courseBaseInfoService.createCourseBase(1232141425L, addCourseDto);
+        CourseBaseInfoDto courseBase = courseBaseInfoService.createCourseBase(1232141425L, addCourseDto);
+        return courseBase;
     }
 
     /**
@@ -64,4 +65,11 @@ public class CourseController {
         return courseBaseInfoDto;
     }
 
+    @ApiOperation("删除课程信息接口")
+    @DeleteMapping("/course/{id}")
+    public void removeCourseBase(@PathVariable Long id) {
+        //TODO:机构认证
+        Long companyId = 1232141425L;
+        courseBaseInfoService.deleteCourseBase(companyId, id);
+    }
 }

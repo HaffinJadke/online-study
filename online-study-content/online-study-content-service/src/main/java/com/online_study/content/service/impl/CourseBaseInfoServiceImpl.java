@@ -1,21 +1,18 @@
 package com.online_study.content.service.impl;
 
+import com.baomidou.mybatisplus.core.assist.ISqlRunner;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.online_study.base.exception.OnlineStudyException;
 import com.online_study.base.model.PageParams;
 import com.online_study.base.model.PageResult;
-import com.online_study.content.mapper.CourseBaseMapper;
-import com.online_study.content.mapper.CourseCategoryMapper;
-import com.online_study.content.mapper.CourseMarketMapper;
+import com.online_study.content.mapper.*;
 import com.online_study.content.service.CourseBaseInfoService;
 import com.online_study.model.dto.AddCourseDto;
 import com.online_study.model.dto.CourseBaseInfoDto;
 import com.online_study.model.dto.EditCourseDto;
 import com.online_study.model.dto.QueryCourseParamsDto;
-import com.online_study.model.po.CourseBase;
-import com.online_study.model.po.CourseCategory;
-import com.online_study.model.po.CourseMarket;
+import com.online_study.model.po.*;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -222,5 +219,44 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 
         CourseBaseInfoDto courseUpdateInfo = getCourseBaseInfo(courseId);
         return courseUpdateInfo;
+    }
+
+    @Autowired
+    private TeachplanMapper teachplanMapper;
+    @Autowired
+    private CourseTeacherMapper courseTeacherMapper;
+
+    /**
+     * 删除课程信息
+     * @param companyId
+     * @param id
+     */
+    @Override
+    @Transactional(rollbackFor = {OnlineStudyException.class, Exception.class})
+    public void deleteCourseBase(Long companyId, Long id) {
+        CourseBase courseBase = courseBaseMapper.selectById(id);
+        if(courseBase == null) {
+            OnlineStudyException.cast("课程不存在");
+        }
+        if(courseBase.getCompanyId().longValue() != companyId) {
+            OnlineStudyException.cast("无权限删除其他机构的课程");
+        }
+
+        int row = courseBaseMapper.deleteById(id);
+        if(row<=0) {
+            OnlineStudyException.cast("删除课程基本信息失败");
+        }
+
+        //还要删除相关联的所有课程信息，关联信息不用判断是否删除成功，因为本来就可能不存在
+        //营销信息
+        row = courseMarketMapper.deleteById(id);
+        //课程计划
+        LambdaQueryWrapper<Teachplan> teachplanWrapper = new LambdaQueryWrapper<>();
+        teachplanWrapper = teachplanWrapper.eq(Teachplan::getCourseId, id);
+        row = teachplanMapper.delete(teachplanWrapper);
+        //教师信息
+        LambdaQueryWrapper<CourseTeacher> courseTeacherWrapper = new LambdaQueryWrapper<>();
+        courseTeacherWrapper = courseTeacherWrapper.eq(CourseTeacher::getCourseId, id);
+        row = courseTeacherMapper.delete(courseTeacherWrapper);
     }
 }

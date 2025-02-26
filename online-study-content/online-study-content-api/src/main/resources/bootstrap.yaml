@@ -1,0 +1,54 @@
+#server:
+#  servlet:
+#    context-path: /content
+#  port: 63040
+
+# 由于配置文件默认nacos对应的项目配置比本地配置优先级高，会导致无法新启动一个端口
+#微服务配置
+spring:
+  application:
+    name: content-api
+  profiles:
+    active: dev # 指定运行环境
+  cloud:
+    nacos:
+      server-addr: 192.168.101.1:8848
+      # 服务发现配置
+      discovery:
+        namespace: dev
+        group: online-study-project
+      # 配置中心配置，配置中心生效文件名必须为bootstrap.yaml
+      config:
+        namespace: dev
+        group: online-study-project
+        file-extension: yaml
+        refresh-enabled: true
+        # 引用service层的配置文件
+        extension-configs:
+          - data-id: content-service-${spring.profiles.active}.yaml
+            group: online-study-project
+            refresh: true
+      # shared-configs:   导入公共配置文件，格式和上面相同
+
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://192.168.101.65:3306/xcplus_content?serverTimezone=UTC&userUnicode=true&useSSL=false
+#    username: root
+#    password: mysql
+
+
+## 日志文件配置路径
+#logging:
+#  config: classpath:log4j2-dev.xml
+
+# swagger扫描包路径
+swagger:
+  title: "在线学习平台内容管理模块"
+  description: "该对课程相关信息进行查询"
+  basePackage: com.online_study.content # 扫描api的包
+  enabled: true
+  version: 1.0.0
+
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 控制台输出sql语句
