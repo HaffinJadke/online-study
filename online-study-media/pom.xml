@@ -19,4 +19,21 @@
         <module>online-study-media-model</module>
     </modules>
 
+    <dependencies>
+
+        <!-- minio依赖-->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>8.4.3</version>
+        </dependency>
+        <!-- http依赖，minio需要-->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.8.1</version>
+        </dependency>
+
+    </dependencies>
+
 </project>
