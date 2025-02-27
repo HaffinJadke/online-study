@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.online_study.content.mapper.CourseCategoryMapper">
 
-    <resultMap id="BaseResultMap" type="com.online_study.model.po.CourseCategory">
+    <resultMap id="BaseResultMap" type="com.online_study.content.model.po.CourseCategory">
             <id property="id" column="id" />
             <result property="name" column="name" />
             <result property="label" column="label" />
@@ -18,7 +18,7 @@
         id,name,label,parentid,is_show,orderby,is_leaf
     </sql>
 
-    <select id="selectCategoryTree" parameterType="String" resultType="com.online_study.model.dto.CourseCategoryTreeDto">
+    <select id="selectCategoryTree" parameterType="String" resultType="com.online_study.content.model.dto.CourseCategoryTreeDto">
         with recursive t1 as (
             select * from course_category where id = #{id}
             union all

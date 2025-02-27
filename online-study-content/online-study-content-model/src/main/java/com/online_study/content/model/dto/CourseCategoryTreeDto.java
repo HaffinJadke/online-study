@@ -1,6 +1,6 @@
-package com.online_study.model.dto;
+package com.online_study.content.model.dto;
 
-import com.online_study.model.po.CourseCategory;
+import com.online_study.content.model.po.CourseCategory;
 import lombok.Data;
 
 import java.io.Serializable;

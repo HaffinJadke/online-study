@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.online_study.content.mapper.TeachplanMapper">
 
-    <resultMap id="BaseResultMap" type="com.online_study.model.po.Teachplan">
+    <resultMap id="BaseResultMap" type="com.online_study.content.model.po.Teachplan">
             <id property="id" column="id" />
             <result property="pname" column="pname" />
             <result property="parentid" column="parentid" />
@@ -24,7 +24,7 @@
     </resultMap>
 
     <!-- 查询到的字段名和TeachPlanDto的属性名无法自动映射，要单独再映射；也可以在类中用@TableField映射-->
-    <resultMap id="treeNodeResultMap" type="com.online_study.model.dto.TeachPlanDto">
+    <resultMap id="treeNodeResultMap" type="com.online_study.content.model.dto.TeachPlanDto">
         <!-- 一级数据映射 -->
         <id     column="one_id"         property="id" />
         <result column="one_pname"      property="pname" />
@@ -37,7 +37,7 @@
         <result column="one_courseId"   property="courseId" />
         <result column="one_coursePubId" property="coursePubId" />
         <!-- 一级中包含多个二级数据 -->
-        <collection property="teachPlanTreeNodes" ofType="com.online_study.model.dto.TeachPlanDto" javaType="List">
+        <collection property="teachPlanTreeNodes" ofType="com.online_study.content.model.dto.TeachPlanDto" javaType="List">
             <!-- 二级数据映射 -->
             <id     column="two_id"           property="id" />
             <result column="two_pname"        property="pname" />
@@ -49,7 +49,7 @@
             <result column="two_orderby"      property="orderby" />
             <result column="two_courseId"     property="courseId" />
             <result column="two_coursePubId"  property="coursePubId" />
-            <association property="teachplanMedia" javaType="com.online_study.model.po.TeachplanMedia">
+            <association property="teachplanMedia" javaType="com.online_study.content.model.po.TeachplanMedia">
                 <id column="teachplanMeidaId"   property="id" />
                 <result column="mediaId"            property="mediaId" />
                 <result column="two_id"             property="teachplanId" />

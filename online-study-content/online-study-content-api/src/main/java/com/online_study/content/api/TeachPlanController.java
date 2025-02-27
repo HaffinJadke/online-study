@@ -1,8 +1,8 @@
 package com.online_study.content.api;
 
 import com.online_study.content.service.TeachPlanService;
-import com.online_study.model.dto.SaveTeachplanDto;
-import com.online_study.model.dto.TeachPlanDto;
+import com.online_study.content.model.dto.SaveTeachplanDto;
+import com.online_study.content.model.dto.TeachPlanDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

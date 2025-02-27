@@ -1,7 +1,7 @@
 package com.online_study.content.mapper;
 
-import com.online_study.model.dto.CourseCategoryTreeDto;
-import com.online_study.model.po.CourseCategory;
+import com.online_study.content.model.dto.CourseCategoryTreeDto;
+import com.online_study.content.model.po.CourseCategory;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;

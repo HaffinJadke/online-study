@@ -1,4 +1,4 @@
-package com.online_study.model.dto;
+package com.online_study.content.model.dto;
 
 import com.online_study.base.exception.ValidationGroups;
 import io.swagger.annotations.ApiModel;

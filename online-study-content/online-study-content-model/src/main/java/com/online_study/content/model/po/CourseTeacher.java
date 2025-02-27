@@ -1,4 +1,4 @@
-package com.online_study.model.po;
+package com.online_study.content.model.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -8,24 +8,22 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * @TableName teachplan_media
+ * @TableName course_teacher
  */
-@TableName(value ="teachplan_media")
+@TableName(value ="course_teacher")
 @Data
-public class TeachplanMedia {
+public class CourseTeacher {
     private Long id;
-
-    private String mediaId;
-
-    private Long teachplanId;
 
     private Long courseId;
 
-    private String mediaFilename;
+    private String teacherName;
+
+    private String position;
+
+    private String introduction;
+
+    private String photograph;
 
     private Date createDate;
-
-    private String createPeople;
-
-    private String changePeople;
 }

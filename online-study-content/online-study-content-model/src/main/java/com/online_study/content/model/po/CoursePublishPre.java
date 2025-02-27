@@ -1,4 +1,4 @@
-package com.online_study.model.po;
+package com.online_study.content.model.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -8,11 +8,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * @TableName course_publish
+ * @TableName course_publish_pre
  */
-@TableName(value ="course_publish")
+@TableName(value ="course_publish_pre")
 @Data
-public class CoursePublish {
+public class CoursePublishPre {
     private Long id;
 
     private Long companyId;
@@ -51,9 +51,7 @@ public class CoursePublish {
 
     private Date createDate;
 
-    private Date onlineDate;
-
-    private Date offlineDate;
+    private Date auditDate;
 
     private String status;
 

@@ -11,6 +11,8 @@
         <module>../online-study-base</module>
         <module>../online-study-content</module>
         <module>../online-study-system</module>
+        <module>../online-study-gateway</module>
+        <module>../online-study-media</module>
     </modules>
     <packaging>pom</packaging>
 

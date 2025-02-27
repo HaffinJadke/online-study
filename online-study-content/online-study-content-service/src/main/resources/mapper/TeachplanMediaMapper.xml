@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.online_study.content.mapper.TeachplanMediaMapper">
 
-    <resultMap id="BaseResultMap" type="com.online_study.model.po.TeachplanMedia">
+    <resultMap id="BaseResultMap" type="com.online_study.content.model.po.TeachplanMedia">
             <id property="id" column="id" />
             <result property="mediaId" column="media_id" />
             <result property="teachplanId" column="teachplan_id" />

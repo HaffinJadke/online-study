@@ -2,11 +2,11 @@ package com.online_study.content.service;
 
 import com.online_study.base.model.PageParams;
 import com.online_study.base.model.PageResult;
-import com.online_study.model.dto.AddCourseDto;
-import com.online_study.model.dto.CourseBaseInfoDto;
-import com.online_study.model.dto.EditCourseDto;
-import com.online_study.model.dto.QueryCourseParamsDto;
-import com.online_study.model.po.CourseBase;
+import com.online_study.content.model.dto.AddCourseDto;
+import com.online_study.content.model.dto.CourseBaseInfoDto;
+import com.online_study.content.model.dto.EditCourseDto;
+import com.online_study.content.model.dto.QueryCourseParamsDto;
+import com.online_study.content.model.po.CourseBase;
 
 /**
  * 课程信息管理接口

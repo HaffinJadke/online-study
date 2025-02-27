@@ -1,7 +1,7 @@
 package com.online_study.content.api;
 
 import com.online_study.content.service.CourseCategoryService;
-import com.online_study.model.dto.CourseCategoryTreeDto;
+import com.online_study.content.model.dto.CourseCategoryTreeDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

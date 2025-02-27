@@ -1,6 +1,6 @@
 package com.online_study.content.service;
 
-import com.online_study.model.dto.CourseCategoryTreeDto;
+import com.online_study.content.model.dto.CourseCategoryTreeDto;
 
 import java.util.List;
 

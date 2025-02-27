@@ -5,15 +5,14 @@ import com.online_study.base.exception.OnlineStudyException;
 import com.online_study.content.mapper.CourseBaseMapper;
 import com.online_study.content.mapper.CourseTeacherMapper;
 import com.online_study.content.service.CourseTeacherService;
-import com.online_study.model.po.CourseBase;
-import com.online_study.model.po.CourseTeacher;
+import com.online_study.content.model.po.CourseBase;
+import com.online_study.content.model.po.CourseTeacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 

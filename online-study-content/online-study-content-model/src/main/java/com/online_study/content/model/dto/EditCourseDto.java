@@ -1,7 +1,6 @@
-package com.online_study.model.dto;
+package com.online_study.content.model.dto;
 
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.annotations.ApiOperation;
 import lombok.Data;
 
 @Data

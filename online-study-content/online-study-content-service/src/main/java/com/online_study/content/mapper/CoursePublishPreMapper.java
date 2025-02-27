@@ -1,6 +1,6 @@
 package com.online_study.content.mapper;
 
-import com.online_study.model.po.CoursePublishPre;
+import com.online_study.content.model.po.CoursePublishPre;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

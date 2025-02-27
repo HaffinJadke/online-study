@@ -1,18 +1,17 @@
 package com.online_study.content.service.impl;
 
-import com.baomidou.mybatisplus.core.assist.ISqlRunner;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.online_study.base.exception.OnlineStudyException;
 import com.online_study.base.model.PageParams;
 import com.online_study.base.model.PageResult;
 import com.online_study.content.mapper.*;
+import com.online_study.content.model.po.*;
 import com.online_study.content.service.CourseBaseInfoService;
-import com.online_study.model.dto.AddCourseDto;
-import com.online_study.model.dto.CourseBaseInfoDto;
-import com.online_study.model.dto.EditCourseDto;
-import com.online_study.model.dto.QueryCourseParamsDto;
-import com.online_study.model.po.*;
+import com.online_study.content.model.dto.AddCourseDto;
+import com.online_study.content.model.dto.CourseBaseInfoDto;
+import com.online_study.content.model.dto.EditCourseDto;
+import com.online_study.content.model.dto.QueryCourseParamsDto;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;

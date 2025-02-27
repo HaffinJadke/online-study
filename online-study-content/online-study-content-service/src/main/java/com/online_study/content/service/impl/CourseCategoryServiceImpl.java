@@ -2,8 +2,8 @@ package com.online_study.content.service.impl;
 
 import com.online_study.content.mapper.CourseCategoryMapper;
 import com.online_study.content.service.CourseCategoryService;
-import com.online_study.model.dto.CourseCategoryTreeDto;
-import com.online_study.model.po.CourseCategory;
+import com.online_study.content.model.dto.CourseCategoryTreeDto;
+import com.online_study.content.model.po.CourseCategory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

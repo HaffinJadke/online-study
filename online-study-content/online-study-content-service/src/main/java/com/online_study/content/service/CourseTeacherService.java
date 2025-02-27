@@ -1,6 +1,6 @@
 package com.online_study.content.service;
 
-import com.online_study.model.po.CourseTeacher;
+import com.online_study.content.model.po.CourseTeacher;
 
 import java.util.List;
 

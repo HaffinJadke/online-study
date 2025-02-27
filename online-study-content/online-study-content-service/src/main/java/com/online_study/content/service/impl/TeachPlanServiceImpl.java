@@ -1,15 +1,14 @@
 package com.online_study.content.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.online_study.base.exception.ErrorEnum;
 import com.online_study.base.exception.OnlineStudyException;
 import com.online_study.content.mapper.TeachplanMapper;
 import com.online_study.content.mapper.TeachplanMediaMapper;
 import com.online_study.content.service.TeachPlanService;
-import com.online_study.model.dto.SaveTeachplanDto;
-import com.online_study.model.dto.TeachPlanDto;
-import com.online_study.model.po.Teachplan;
-import com.online_study.model.po.TeachplanMedia;
+import com.online_study.content.model.dto.SaveTeachplanDto;
+import com.online_study.content.model.dto.TeachPlanDto;
+import com.online_study.content.model.po.Teachplan;
+import com.online_study.content.model.po.TeachplanMedia;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.online_study.content.mapper.CourseBaseMapper">
 
-    <resultMap id="BaseResultMap" type="com.online_study.model.po.CourseBase">
+    <resultMap id="BaseResultMap" type="com.online_study.content.model.po.CourseBase">
             <id property="id" column="id" />
             <result property="companyId" column="company_id" />
             <result property="companyName" column="company_name" />

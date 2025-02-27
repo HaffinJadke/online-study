@@ -1,7 +1,7 @@
 package com.online_study.content.api;
 
 import com.online_study.content.service.CourseTeacherService;
-import com.online_study.model.po.CourseTeacher;
+import com.online_study.content.model.po.CourseTeacher;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

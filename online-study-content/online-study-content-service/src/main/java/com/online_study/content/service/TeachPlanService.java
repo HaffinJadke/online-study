@@ -1,7 +1,7 @@
 package com.online_study.content.service;
 
-import com.online_study.model.dto.SaveTeachplanDto;
-import com.online_study.model.dto.TeachPlanDto;
+import com.online_study.content.model.dto.SaveTeachplanDto;
+import com.online_study.content.model.dto.TeachPlanDto;
 
 import java.util.List;
 

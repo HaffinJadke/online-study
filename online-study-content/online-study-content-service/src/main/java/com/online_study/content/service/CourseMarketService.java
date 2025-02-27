@@ -1,6 +1,6 @@
 package com.online_study.content.service;
 
-import com.online_study.model.po.CourseMarket;
+import com.online_study.content.model.po.CourseMarket;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

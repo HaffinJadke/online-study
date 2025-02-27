@@ -1,7 +1,7 @@
 package com.online_study.content.mapper;
 
-import com.online_study.model.dto.TeachPlanDto;
-import com.online_study.model.po.Teachplan;
+import com.online_study.content.model.dto.TeachPlanDto;
+import com.online_study.content.model.po.Teachplan;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 

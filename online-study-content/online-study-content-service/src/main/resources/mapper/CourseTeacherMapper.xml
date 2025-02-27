@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.online_study.content.mapper.CourseTeacherMapper">
 
-    <resultMap id="BaseResultMap" type="com.online_study.model.po.CourseTeacher">
+    <resultMap id="BaseResultMap" type="com.online_study.content.model.po.CourseTeacher">
             <id property="id" column="id" />
             <result property="courseId" column="course_id" />
             <result property="teacherName" column="teacher_name" />

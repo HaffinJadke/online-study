@@ -1,7 +1,7 @@
-package com.online_study.model.dto;
+package com.online_study.content.model.dto;
 
-import com.online_study.model.po.Teachplan;
-import com.online_study.model.po.TeachplanMedia;
+import com.online_study.content.model.po.Teachplan;
+import com.online_study.content.model.po.TeachplanMedia;
 import lombok.Data;
 import lombok.ToString;
 
