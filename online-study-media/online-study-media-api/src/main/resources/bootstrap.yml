@@ -1,0 +1,21 @@
+#微服务配置
+spring:
+  application:
+    name: media-api
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 192.168.101.1:8848
+      discovery:
+        namespace: ${spring.profiles.active}
+        group: online-study-project
+      config:
+        namespace: ${spring.profiles.active}
+        group: online-study-project
+        file-extension: yaml
+        refresh-enabled: true
+        extension-configs:
+          - data-id: media-service-${spring.profiles.active}.yaml
+            group: online-study-project
+            refresh: true
