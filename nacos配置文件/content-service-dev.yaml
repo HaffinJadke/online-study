@@ -1,4 +1,4 @@
-# group: online-study-content
+# group: online-study-project
 # \online-study-content\online-study-content-service\src\main\resources\bootstrap.yaml
 spring:
   datasource:

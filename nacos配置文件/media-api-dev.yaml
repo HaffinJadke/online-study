@@ -1,9 +1,9 @@
 # group: online-study-project
-# \online-study-content\online-study-content-api\src\main\resources\bootstrap.yaml
+# \online-study-media\online-study-media-api\src\main\resources\bootstrap.yaml
 server:
   servlet:
-    context-path: /content
-  port: 63040
+    context-path: /media
+  port: 63050
 
 # 设置项目本地配置优先，从而可以新启一个端口
 spring:

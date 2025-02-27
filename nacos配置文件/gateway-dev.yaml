@@ -1,4 +1,4 @@
-# group: online-study-content
+# group: online-study-project
 # online-study-gateway\src\main\resources\bootstrap.yaml
 server:
   port: 63010 # 网关端口

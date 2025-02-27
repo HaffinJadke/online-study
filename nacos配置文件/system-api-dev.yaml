@@ -1,4 +1,4 @@
-# group: online-study-content
+# group: online-study-project
 # \online-study-system\online-study-system-service\src\main\resources\bootstrap.yaml
 server:
   servlet:
